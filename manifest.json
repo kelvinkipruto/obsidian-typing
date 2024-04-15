@@ -4,7 +4,7 @@
     "version": "0.3.7",
     "minAppVersion": "0.9.12",
     "description": "Programmatic customizations for groups of notes",
-    "author": "Nikita Konodyuk",
-    "authorUrl": "https://github.com/konodyuk",
+    "author": "Kelvin Kipruto",
+    "authorUrl": "https://github.com/kelvinkipruto/obsidian-typing",
     "isDesktopOnly": false
 }
