@@ -70,15 +70,22 @@ const obsidianEditorTheme = (overrides: StyleSpec, isDark: boolean = false) =>
                     backgroundColor: "var(--background-modifier-hover)",
                 },
             },
-            ".cm-panels": { backgroundColor: "var(--background-secondary)", fontFamily: "var(--font-interface)" },
+            ".cm-panels": {
+                backgroundColor: "var(--background-secondary)",
+                fontFamily: "var(--font-interface)",
+            },
             ".cm-panels .cm-panel.cm-panel-lint ul [aria-selected]": {
                 backgroundColor: "var(--background-modifier-hover)",
             },
-            ".cm-panels.cm-panels-top": { borderBottom: "2px solid var(--background-modifier-border)" },
-            ".cm-panels.cm-panels-bottom": { borderTop: "2px solid var(--background-modifier-border)" },
+            ".cm-panels.cm-panels-top": {
+                borderBottom: "2px solid var(--background-modifier-border)",
+            },
+            ".cm-panels.cm-panels-bottom": {
+                borderTop: "2px solid var(--background-modifier-border)",
+            },
             ...overrides,
         },
-        { dark: isDark }
+        { dark: isDark },
     );
 
 const obsidianThemeHighlighting = HighlightStyle.define([
@@ -97,7 +104,11 @@ const obsidianThemeHighlighting = HighlightStyle.define([
     { tag: t.tagName, color: "var(--code-tag)" },
     { tag: t.attributeName, color: "var(--code-property)" },
 
-    { tag: t.strong, color: "var(--bold-color)", fontWeight: "var(--bold-weight)" },
+    {
+        tag: t.strong,
+        color: "var(--bold-color)",
+        fontWeight: "var(--bold-weight)",
+    },
     { tag: t.emphasis, color: "var(--italic-color)", fontStyle: "italic" },
     { tag: t.strikethrough, textDecoration: "line-through" },
     ...headingStyles,
@@ -120,7 +131,7 @@ export const obsidianCodeTheme: Extension = [
                 backgroundColor: "unset",
             },
         },
-        true
+        true,
     ),
     syntaxHighlighting(obsidianThemeHighlighting),
 ];
